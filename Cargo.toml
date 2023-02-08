@@ -2,7 +2,7 @@
 name = "sort-path-length"
 version = "0.1.0"
 edition = "2021"
-license = "GPLv3"
+license = "GPL-3.0"
 repository = "https://github.com/reinaldorauch/sort-path-length"
 homepage = "https://reinaldorauch.dev.br/sort-path-length"
 docuimentation = "https://reinaldorauch.dev.br/sort-path-length"
