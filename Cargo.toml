@@ -2,7 +2,12 @@
 name = "sort-path-length"
 version = "0.1.0"
 edition = "2021"
-
+license = "GPLv3"
+repository = "https://github.com/reinaldorauch/sort-path-length"
+homepage = "https://sort-path-length.reinaldorauch.dev.br"
+docuimentation = "https://sort-path-length.reinaldorauch.dev.br"
+description = "Takes a file of paths and sort them by component length"
+authors =["Reinaldo A. C. Rauch <reinaldorauch@gmail.com>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
