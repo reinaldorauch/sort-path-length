@@ -13,6 +13,12 @@ Binary package to sort paths based on their component's length
 
 where `<path>` is a file containing paths separtated by `\n` (new line).
 
+Or you can pass via pipe in the terminal like so:
+
+`$ cat a_file | sort-path-length`
+
+If you do not pass a file in the argument or the file name is "-" the program will expect input in the stdio
+
 ### example input file
 
 ```

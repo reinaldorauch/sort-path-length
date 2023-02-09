@@ -21,6 +21,13 @@ $ sort-path-length <path>
 
 where `<path>` is the path of a file that contains a list of paths separated by `\n` (newline)
 
+Or you can pass via pipe in the terminal like so:
+
+`$ cat a_file | sort-path-length`
+
+If you do not pass a file in the argument or the file name is "-" the program will expect input in the stdio
+
+
 ### example input file
 
 ```
@@ -46,7 +53,7 @@ GPLv3
 
 ## TODO
 
-* Accept input from stdin
+* ~~Accept input from stdin~~ Done.
 * Add option to change sort order
 * Check usage on other systems (eg: Windows)
 * Improve documentation

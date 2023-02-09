@@ -1,18 +1,37 @@
 use std::collections::HashMap;
 use std::env;
 use std::fs;
+use std::io::stdin;
+use std::io::Read;
 use std::path::Path;
+
+fn read_from_stdio() -> String {
+    let mut input = String::new();
+    stdin().lock().read_to_string(&mut input).unwrap();
+    input
+}
 
 fn main() {
     // read file line paths
-    if env::args().len() != 2 {
+
+    let args_length = env::args().len();
+
+    if args_length > 2 {
         panic!("Usage: <path>");
     }
 
-    let args: Vec<String> = env::args().collect();
-    let file_to_read = &args[1];
+    let file = if args_length == 1 {
+        read_from_stdio()
+    } else {
+        let args: Vec<String> = env::args().collect();
+        let file_to_read = &args[1];
 
-    let file = fs::read_to_string(file_to_read).unwrap();
+        if file_to_read == "-" {
+            read_from_stdio()
+        } else {
+            fs::read_to_string(file_to_read).unwrap()
+        }
+    };
 
     let mut path_hash_map: HashMap<u32, Vec<&str>> = HashMap::new();
 
