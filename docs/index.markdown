@@ -25,7 +25,7 @@ Or you can pass via pipe in the terminal like so:
 
 `$ cat a_file | sort-path-length`
 
-If you do not pass a file in the argument or the file name is "-" the program will expect input in the stdio
+If you do not pass a file in the argument or the file name is "-" the program will expect input in the stdin
 
 
 ### example input file

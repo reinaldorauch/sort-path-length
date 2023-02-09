@@ -5,7 +5,7 @@ use std::io::stdin;
 use std::io::Read;
 use std::path::Path;
 
-fn read_from_stdio() -> String {
+fn read_from_stdin() -> String {
     let mut input = String::new();
     stdin().lock().read_to_string(&mut input).unwrap();
     input
@@ -21,13 +21,13 @@ fn main() {
     }
 
     let file = if args_length == 1 {
-        read_from_stdio()
+        read_from_stdin()
     } else {
         let args: Vec<String> = env::args().collect();
         let file_to_read = &args[1];
 
         if file_to_read == "-" {
-            read_from_stdio()
+            read_from_stdin()
         } else {
             fs::read_to_string(file_to_read).unwrap()
         }
