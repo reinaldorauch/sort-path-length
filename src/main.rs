@@ -1,6 +1,5 @@
 use std::fs;
-use std::io::stdin;
-use std::io::Read;
+use std::io::{stdin, stdout, Read};
 
 use sort_path_length::sort_path_length;
 
@@ -27,12 +26,10 @@ fn read_from_stdin() -> String {
 fn main() {
     let args = CliArgs::parse();
 
-    println!("{:?}", args);
-
     let file = match args.file {
         None => read_from_stdin(),
         Some(name) => fs::read_to_string(name).unwrap(),
     };
 
-    println!("{}", sort_path_length(file, args.invert));
+    sort_path_length(file.as_str(), args.invert, &mut stdout());
 }
