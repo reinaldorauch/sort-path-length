@@ -42,6 +42,6 @@ the output on stdout should be
 ## TODO
 
 * ~~Accept input from stdin~~ (done)
-* Add option to change sort order
+* ~~Add option to change sort order~~ (done)
 * Check usage on other systems (eg: Windows)
 * Improve documentation
